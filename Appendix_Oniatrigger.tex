@@ -1,0 +1,149 @@
+\chapter{Summary of the onia triggers in 2016 data-taking period}
+\label{sec:Oniatrig}
+When the analysis was reviewed, one question from the ARC was that why onia triggers are not appropriate for this analysis. Our arguments are as follows. 
+Most of the onia triggers are pre-scaled and that is why we can not use them. Some of them have high $p_{T}$ cut on the subleading muon. In addition, in the onia triggers used in various B-physics (BPH) analyses, there is a common requirement  on vertex probability. If we want to use these triggers, we need to add a cut on vertex probability in our offline selection, which then means we will have problem with the measurement of scale factors. In addition, if the vertex of muons in these triggers is not the PV for all the time, we will have problem with the charged hadron isolation of photon because it’s computed with respect to the PV.
+
+Table~\ref{table:Oniatrigs} lists all the available onia triggers in 2016 data-taking period. 
+
+\begin{longtable}[!ht]{ l|p {6cm} }
+  \caption[OniaTrig]{Summary table for onia triggers for BPH analyses.\label{table:Oniatrigs}} \\
+HLT  & Note  \\
+\hline
+\hline
+%\multicolumn{2}{c}{Charmonium}\\
+ HLT\_Dimuon0\_Jpsi\_Muon\_v5  &  group: BPH  \\
+ 								& rate:  prescaled to few Hertz  \\
+ 								& type: control  \\ 
+ 								& description: Jpsi + 1 muon  \\
+\hline
+ HLT\_Dimuon0er16\_Jpsi\_NoOS\_NoVertexing\_v4  &  group: BPH  \\ 
+ 												& rate:  prescaled to few Hertz  \\
+ 												& type: TnP \\ 
+ 												& description: dimuon without charge requirements  \\
+\hline
+HLT\_Dimuon13\_PsiPrime\_v6 & group: BPH \\
+							& exp rate at 1.4E34: 7 Hz \\
+							& type: signal \\
+							& description: Quarkonia \\
+							& (minimum mass cut at 3.35GeV) \\ 
+\hline
+HLT\_Dimuon16\_Jpsi\_v6 & group: BPH \\
+						& exp rate at 7E33: 21.5 Hz \\
+						& type: signal \\
+						& description: Quarkonia \\
+						& (vertex probability cut is implemented) \\
+\hline
+HLT\_Dimuon20\_Jpsi\_v6 & group: BPH \\
+						& exp rate at 1.4E34: 20 Hz \\
+						& type: signal \\
+						& description: Quarkonia \\ 
+						& (vertex probability cut is implemented) \\
+\hline
+HLT\_Dimuon6\_Jpsi\_NoVertexing\_v4 & group: BPH \\
+									& rate:  prescaled to few Hertz \\
+									& type: TnP \\
+									& description: dimuon without vertexing \\
+\hline
+HLT\_Dimuon8\_PsiPrime\_Barrel\_v6 & group: BPH \\
+									& exp pure rate at 7E33: 2.5 Hz \\
+									& type: signal \\
+									& description: Quarkonia \\ 
+									& (minimum mass cut at 3.35GeV) \\ 
+\hline
+HLT\_DoubleMu4\_3\_Bs\_v7 & group: BPH \\
+							& (No description. But the filter has cut \\
+							&on dimuon mass that is not for Jpsi window) \\
+\hline
+HLT\_DoubleMu4\_3\_Jpsi\_Displaced\_v7 & group: BPH \\
+										& exp rate at 1.4E34: 8 Hz (prescale=5) \\
+										& type: signal \\
+										& description: Bs->mumu \\
+\hline
+HLT\_DoubleMu4\_JpsiTrk\_Displaced\_v7 & group: BPH \\
+										& exp rate at 1.4E34: 23 Hz \\
+										& type: signal \\
+										& description: B studies\\
+										& (vertex variables cut are implemented) \\
+\hline
+HLT\_DoubleMu4\_PsiPrimeTrk\_Displaced\_v7 & group: BPH \\
+											& exp rate at 1.4E34: 2 Hz \\
+											& type: signal \\
+											& description: B studies \\
+											& (vertex variables cut are implemented \\
+											& minimum mass cut at 3.35GeV) \\
+\hline
+HLT\_Mu7p5\_L2Mu2\_Jpsi\_v4 & group: BPH \\
+							& rate:  prescaled to few Hertz \\
+							& type: TnP \\
+							& description: Mu + L2Muon for track TnP efficiencies \\
+\hline
+HLT\_Mu7p5\_Track2\_Jpsi\_v4 & group: BPH \\
+								& rate:  prescaled to few Hertz\\
+								& type: TnP\\
+								& description: Mu + Track for muon TnP efficiencies\\
+\hline
+HLT\_Mu7p5\_Track3p5\_Jpsi\_v4 & group: BPH \\
+								& rate:  prescaled to few Hertz\\
+								& type: TnP\\
+								& description: Mu + Track for muon TnP efficiencies\\
+\hline
+HLT\_Mu7p5\_Track7\_Jpsi\_v4 & group: BPH \\
+								& rate:  prescaled to few Hertz\\
+								& type: TnP \\
+								& description: Mu + Track for muon TnP efficiencies \\
+\hline
+HLT\_QuadMuon0\_Dimuon0\_Jpsi\_v4 & group: BPH \\
+									& rate:  prescaled to few Hertz \\
+									& type: physics \\
+									& description: Jpsi + 2 muons \\
+\hline
+HLT\_Dimuon0\_Phi\_Barrel\_v6 & group: BPH \\
+								& exp rate at 7E33: 12.5 Hz \\
+								& type: signal \\
+								& description: Quarkonia \\
+\hline
+HLT\_Dimuon0\_Upsilon\_Muon\_v5 & group: BPH \\
+								& rate:  prescaled to few Hertz \\
+								& type: control \\
+								& description: Upsilon + 1 muon \\
+\hline 
+HLT\_Dimuon13\_Upsilon\_v6 & group: BPH \\
+							& exp rate at 1.4E34: 14 Hz \\
+							& type: signal \\
+							& description: Quarkonia \\
+\hline
+HLT\_Dimuon8\_Upsilon\_Barrel\_v6 & group: BPH \\
+									& exp pure rate at 7E33, prescaled to 2: 4.5 Hz \\
+									& type: signal \\
+									& description: Quarkonia \\
+\hline
+HLT\_Mu25\_TkMu0\_dEta18\_Onia\_v6 & group: BPH \\
+									& (minimum mass cut at 2.8GeV) \\
+\hline
+HLT\_Mu7p5\_L2Mu2\_Upsilon\_v4 & group: BPH \\
+								& rate:  prescaled to few Hertz \\
+								& type: TnP \\
+								& description: Mu + L2Muon for track TnP efficiencies \\
+\hline
+HLT\_Mu7p5\_Track2\_Upsilon\_v4 & group: BPH\\
+								& rate:  prescaled to few Hertz \\
+								& type: TnP \\
+								& description: Mu + Track for muon TnP efficiencies \\
+\hline 
+HLT\_Mu7p5\_Track3p5\_Upsilon\_v4 & group: BPH\\
+									& rate:  prescaled to few Hertz \\
+									& type: TnP \\
+									& description: Mu + Track for muon TnP efficiencies \\
+\hline
+HLT\_Mu7p5\_Track7\_Upsilon\_v4 & group: BPH\\
+								& rate:  prescaled to few Hertz \\
+								& type: TnP \\
+								& description: Mu + Track for muon TnP efficiencies \\
+\hline
+HLT\_QuadMuon0\_Dimuon0\_Upsilon\_v4 & group: BPH \\
+									& rate:  prescaled to few Hertz \\
+									& type: physics \\
+									& description: Upsilon + 2 muons \\
+\hline
+\hline
+\end{longtable}

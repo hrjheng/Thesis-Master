@@ -1,0 +1,40 @@
+\chapter{Projection}
+\label{sec:Appendix_proj}
+The comparison of the expected signal and background yields between the Run1 result from ATLAS~\cite{Aad:2015sda} and our current result.
+\begin{table}[h]
+  \begin{center}                                                                                                                                    
+    \caption{Summary table of the cross-section of the SM Z boson and the luminosity in 8TeV and 13TeV Run.}
+    \begin{tabular}{c|c|c}
+      & 8TeV & 13TeV \\
+      \hline
+      $\sigma(pp\to Z,\ m_{ll}>50 GeV)\ (pb)$ & 35038.69~\cite{SM_CrossSection8TeV}  & 57094.47~\cite{SM_CrossSection} \\
+      Luminosity ($fb^{-1}$) & 20.3 & 35.86\\
+    \end{tabular}                                                                                                                                  
+    \label{tab:params}                                                                                                                            
+  \end{center}
+\end{table} 
+
+The projection factor to be applied on the expected signal and background events is 
+\begin{equation}
+(\frac{57094.47}{35038.69})\times(\frac{35.86}{20.3})\simeq 2.88
+\label{eqn:proj_factor}
+\end{equation}
+
+In the ATLAS Run1 8TeV result, there are 31 events in expected background in the range $80<m_{\mu\mu\gamma}<100 GeV$and around 0.43 events in expected signal. Projecting the yields according to the projection factor to the 13TeV condition, it's estimated to have 89.3 events in expected background and 1.23 events in signal.  
+
+\begin{table}[h]
+  \begin{center}
+    \caption{Summary table of the projection study}
+    \begin{tabular}{c|c|c|c|c}
+      & 8TeV & 13TeV & 13TeV & ratio\\
+      & ATLAS & projection from 8TeV ATLAS(i) & Our result(ii) & (ii)/(i)\\
+      \hline
+      \hline
+      Background & 31 & 89.3 & 187 & 2.09\\
+      Signal & 0.426 & 1.23 & 1.53 & 1.24\\
+    \end{tabular}
+    \label{tab:proj}
+  \end{center}
+\end{table}
+
+Compared to Run1 ATLAS result, our expected background is approximately 2 times more than ATLAS projected value, while for the signal it's only increased by a factor of 1.24. In Run1 ATLAS analysis, the signal were produced by POWHEG, while in our case the PYTHIA8 is used.
