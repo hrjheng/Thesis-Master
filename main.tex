@@ -25,7 +25,7 @@
 %% Page Intentionally Left Blank'', use the ``leftblank'' option, as
 %% above. 
 
-\documentclass[12pt,twoside]{mitthesis}
+\documentclass[12pt,oneside,openany]{mitthesis}
 \usepackage{lgrind}
 \usepackage{graphicx}
 \usepackage[utf8]{inputenc} % Required for inputting international characters
@@ -61,15 +61,18 @@
 % \include{signature}
 \pagestyle{plain}
 \include{contents}
-	\begin{linenumbers}
+
+\pagenumbering{arabic}
+%	\begin{linenumbers}
 	\include{Introduction}
 	\include{CMS}
 	\include{Analysis}
 	\include{Results}
 	\appendix
-	\include{Appendix_BiasStudy}1
+	\include{Appendix_BiasStudy}
 	\include{Appendix_Systematic}
-\end{linenumbers}
+	\include{Appendix_HGCAL}
+%\end{linenumbers}
 %\include{appb}
 \include{biblio}
 

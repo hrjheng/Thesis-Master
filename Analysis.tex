@@ -2,7 +2,7 @@
 \label{Chap:Ana}
 	\section{Data and simulated samples}
 		\subsection{Data sample}
-		The MuonEG February re-reco dataset collected in 2016 at $\sqrt{s}=13~\TeV$, corresponding to a total integrated luminosity of 35.9~\fbinv , is used. The data for each run period is summarized in Table~\ref{tab:datasample}. The official Golden JSON file is used to select the luminosity sections recorded when all sub-detectors running under good condition. 
+		The MuonEG dataset collected in 2016 at $\sqrt{s}=13~\TeV$, corresponding to a total integrated luminosity of 35.9~\fbinv , is used. The data for each run period is summarized in Table~\ref{tab:datasample}. The data used are recorded with all sub-detectors running under good condition. 
 		\begin{table}[!ht]
 		  \begin{center}
 		    \begin{tabular}{|l|c|}
@@ -25,7 +25,7 @@
 		
 		\subsection{Simulated samples}
 		\subsubsection*{Signal samples}
-		The $\PH\to\JPsi\ \gamma\to\mu\mu\gamma$ sample, with $m_{\PH}=125$\GeV, is produced with \POWHEG v2.0~\cite{Alioli:2008tz,Nason:2009ai} for ggF, VBF, V$\PH$, and tt$\PH$ productions. The generator is interfaced with \PYTHIA 8.212~\cite{SJOSTRAND2008852,Sjostrand:2014zea} for hadronization and fragmentation with tune CUETP8M1~\cite{Khachatryan:2015pea}. 
+		The $\PH\to\JPsi\ \gamma\to\mu\mu\gamma$ sample, with $m_{\PH}=125$\GeV, is produced with \POWHEG v2.0~\cite{Alioli:2008tz,Nason:2009ai} for ggF, VBF, V$\PH$, and tt$\PH$ productions. The generator is interfaced with \PYTHIA 8.212~\cite{SJOSTRAND2008852,Sjostrand:2014zea} for hadronization and fragmentation with underlying event tune CUETP8M1~\cite{Khachatryan:2015pea}. 
 The parton distribution function PDF set used is NNPDF3.0~\cite{Ball:2014uwa}. The samples used, with the cross-section for each production mode taken from Ref.~\cite{LHCHXSWG}, are summarized in the Table~\ref{tab:HiggsSample}. The cross sections for all the productions are calculated with QCD and electroweak (EW) corrections. The EW correction for each mode includes the calculation up to next-to-leading order (NLO). The QCD correction for the ggF is calculated at next-to-next-to-next-to-leading order, at next-to-next-to-leading order (NNLO) for the VBF and V$\PH$ , and at NLO for the tt$\PH$. 		
 		\begin{table}[!ht]
 		%\footnotesize
@@ -50,14 +50,13 @@ The parton distribution function PDF set used is NNPDF3.0~\cite{Ball:2014uwa}. T
 		  \end{center}
 		\end{table}
 		
-		The $\cPZ\to\JPsi\ \gamma\to\mu\mu\gamma$ sample, with $m_{\cPZ}=91.2$\GeV~\cite{Patrignani:2241948}, is produced with the \PYTHIA 8.226 generator for hadronization and fragmentation with underlying event tune CUETP8M1.
+		The $\cPZ\to\JPsi\ \gamma\to\mu\mu\gamma$ sample, with $m_{\cPZ}=91.2$\GeV~\cite{Patrignani:2241948}, is produced with the \PYTHIA 8.226 generator for hadronization and fragmentation with tune CUETP8M1.
 The SM $\cPZ$ boson production cross section includes the NNLO contribution, QCD and electroweak corrections from \FEWZ3.1 using the NLO PDF set NNPDF3.0.
 %The $\cPZ$ boson $\pt$ is reweighted to match the NLO calculation. 	
 		To account for the potential mismodeling of the $\cPZ$ $\pt$ distribution and the missing $\gamma^{*}$ contribution in the sample, we apply the $\cPZ$ $\pt$ reweighting. 
-		We use the Drell-Yan jets samples (with $\text{m}_{ll} > 50\GeV$) as references to do $\cPZ$ $\pt$ reweighting, one generated with $\MGvATNLO$ matrix-element generator and the other one with $\POWHEG$ generator. In both samples, the NLO contribution, the interference, and the contribution of the $\gamma^{*}$ diagrams are included. 
+		The Drell-Yan jets samples (with $\text{m}_{ll} > 50\GeV$), one generated with $\MGvATNLO$ matrix-element generator and the other one with $\POWHEG$ generator,  are used as references to calculate the reweighting factors. In both samples, the NLO contribution, the interference, and the contribution of the $\gamma^{*}$ diagrams are included. 
 		The left plot of Fig.~\ref{fig:ZPtRewei} shows the $\cPZ$ $\pt$ distributions at generator level of the $\cPZ\to\JPsi\ \gamma$ and Drell-Yan jets samples. The interference between diagrams at NLO in $a\MCATNLO$ sample are properly handled.  
-		%As one can see, the distributions of $a\MCATNLO$ and the $\POWHEG$ are similar. 
-		We take the ratio of the two $\pt$ distributions ''Drell-Yan jets ($a\MCATNLO$)'' to ''$\cPZ\to\JPsi\ \gamma$'' as binned weight, as shown in the right plot of Fig.~\ref{fig:ZPtRewei}.
+		The ratio of the two $\pt$ distributions ''Drell-Yan jets ($a\MCATNLO$)'' to ''$\cPZ\to\JPsi\ \gamma$'' is used as binned weight, as shown in the right plot of Fig.~\ref{fig:ZPtRewei}.
 		\begin{figure}[!ht]
 		  \begin{center}
 		  \includegraphics[width=0.5\textwidth]{Fig/ZPt_comp_withgenwei_final}~
@@ -67,11 +66,10 @@ The SM $\cPZ$ boson production cross section includes the NNLO contribution, QCD
 		\end{figure}
 		
 		\subsubsection*{$\JPsi$ polarization}
-		The Higgs boson is now commonly believed to be a spin-0 particle, and the $\JPsi$ from its decay is therefore transversely polarized (with $\text{J}_{\text{Z}}=\pm 1$). However, this polarization is not correctly simulated in the \PYTHIA. The distribution of $cos\theta$ was checked, where $\theta$ is the angle between the muon and the direction of $\JPsi$, and is derived at the generator level. The angle $\theta$ is calculated without kinematic requirement and in the rest frame of $\JPsi$, where the direction of $\JPsi$ is obtained from the center-of-mass (CM) frame of the Higgs boson. 
-		%In the Higgs Dalitz background sample, however, polarization of the $\gamma^{*}$ is correctly simulated.
-		The $\PH\to\JPsi\ \gamma$ samples are therefore reweighted using weight $w = 3/4\times(1+(cos\theta)^{2})$ per event. This reweighting preserves the total number of events in the samples, however, results in a decrease of the signal acceptance by 7.0\%.
+		The Higgs boson is now commonly believed to be a spin-0 particle, and the $\JPsi$ from its decay is therefore transversely polarized (with $\text{J}_{\text{Z}}=\pm 1$). However, this polarization is not correctly simulated in the generation. The distribution of $cos\theta$ was checked, where $\theta$ is the angle between the muon and the direction of $\JPsi$, and is derived at the generator level. The angle $\theta$ is calculated without kinematic requirement and in the rest frame of $\JPsi$, where the direction of $\JPsi$ is obtained from the center-of-mass (CM) frame of the Higgs boson (the helicity frame). 
+		The $\PH\to\JPsi\ \gamma$ samples are therefore reweighted using weight $w = 3/4\times(1+(cos\theta)^{2})$ per event~\cite{PhysRevD.83.031503}. This reweighting preserves the total number of events in the samples, however, results in a decrease of the signal acceptance by 7.0\%.
 		No systematic uncertainty is assigned for this procedure since the reweighting is done via exact formula, and the angular distribution after reweighting is the one we expect. 
-		Figs.~\ref{fig:JpsiPolarization} shows the distributions of the $\PH\to\JPsi\ \gamma$ samples before (green), after (blue) reweighting, and of the $\PH\to\gamma^{*}\gamma$ sample (red) where the polarization of $\gamma^{*}$ is correctly simulated.
+		Fig.~\ref{fig:JpsiPolarization} shows the distributions of the $\PH\to\JPsi\ \gamma$ samples before (green), after (blue) reweighting, and of the $\PH\to\gamma^{*}\gamma$ sample (red) where the polarization of $\gamma^{*}$ is correctly simulated.
 		
 		\begin{figure}[!ht]\begin{center}
 		  \includegraphics[width=0.7\textwidth]{Fig/GenLevel_HJpsiG/Jpsi_Polarization_H_new}
@@ -79,14 +77,14 @@ The SM $\cPZ$ boson production cross section includes the NNLO contribution, QCD
 		\label{fig:JpsiPolarization}\end{center}\end{figure} 
 		
 		The Z boson is a spin-1 particle, the $\JPsi$ from its decay can be transversely (with $\text{J}_{Z}=\pm 1$) or longitudinally polarized (with $\text{J}_{Z}=0$), depending on the polarization of the $\cPZ$ boson. 
-		Figs.~\ref{fig:ZdecayJpsiPolarization} shows the distributions resulting from different polarization scenarios. 
-		Table~\ref{tab:PolSce} summarizes the reweight formulae and effects on acceptance from different polarization scenarios.
+		Fig.~\ref{fig:ZdecayJpsiPolarization} shows the $cos\theta$ distributions with different polarization scenarios. 
+		Table~\ref{tab:PolSce} summarizes the reweight formulae and effects on acceptance from different polarization assumption.
 		
-		The central value of the final results is to assume the $\JPsi$ to be unpolarized. Variations resulting from the extreme scenarios (complete transverse or longitudinal) will be quoted and shown.
+	The results from the $\cPZ$ boson polarization measurement are not used to constrain the helicity of the $\JPsi$ meson in this analysis. The signal acceptance is therefore calculated for the unpolarized case and for two extreme scenarios, one in which the $\JPsi$ is fully transversely polarized and the other in which it is fully longitudinally polarized
 		
 		\begin{figure}[!ht]\begin{center}
 		  \includegraphics[width=0.7\textwidth]{Fig/GenLevel_ZJpsiG/Polarization_Scenario}
-		  \caption{Distributions of $cos\theta$ of $\JPsi\to\mu\mu$ resulting from different polarization scenarios. The blue distribution is the unpolarized scenario; the earthy yellow distribution is fully transversely polarized scenario; the red distribution is fully longitudinal polarized scenario.}
+		  \caption{Distributions of $cos\theta$ of $\JPsi\to\mu\mu$ decay resulting from different polarization scenarios. The blue distribution is the unpolarized scenario; the earthy yellow distribution is fully transversely polarized scenario; the red distribution is fully longitudinal polarized scenario.}
 		\label{fig:ZdecayJpsiPolarization}\end{center}\end{figure}
 		
 		\begin{table}[!ht]
@@ -104,7 +102,7 @@ The SM $\cPZ$ boson production cross section includes the NNLO contribution, QCD
 		\end{table}
 		
 		\subsubsection*{Background}  
-The Higgs boson Dalitz decay~\cite{Abba96}, $\PH\to\gamma^{*}\gamma\to\mu\mu\gamma$, results in the same final state as the signal. This process exhibits a peak in the three-body invariant mass $m_{\mu\mu\gamma}$ at the Higgs boson mass, and is therefore referred to as a peaking, or resonant, background. It is taken into account when deriving the upper limit on the branching fraction for $\cPZ \to\JPsi\ \gamma$. The diagrams for $\PH\to\gamma^*\gamma$ process are shown in Fig.~\ref{fig:FeynmanDiagrams_Dalitz}. Samples of Higgs boson Dalitz decays, produced in ggF, VBF, V$\PH$ for $m_{\PH}=125$\GeV, are simulated at NLO using the $\MADGRAPH 5$\_a\MCATNLO 2.6.0 matrix element generator~\cite{Alwall:2014hca}, interfaced with \PYTHIA 8.212 for parton showering and hadronization. The dimuon invariant mass $m_{\mu\mu}$ in the ggF sample is restricted to be less than 50\GeV, while in VBF and V$\PH$ samples it is less than 60\GeV. The contribution of the tt$\PH$ is accounted for by scaling the VBF signal to the tt$\PH$ production cross section. The branching fraction for $\PH\to\gamma^{*}\gamma$ is obtained from MCFM 7.0.1 program~\cite{MCFM7}. The other source of peaking background comes from the decay of a Higgs boson into two muons, with a photon radiated from one of the muons. Fig.~\ref{fig:GenLevel_Hmumu} shows the distributions of some kinematic variables for the $\PH\to\PGm\PGm$ and the $\PH\to\JPsi\ \gamma$ decays. As one can see, the event signatures of the decay are different from those of the $\PH\to\JPsi\ \gamma$, the contribution of this background is found to be negligible after the event selection.		
+The Higgs boson Dalitz decay~\cite{Abba96}, $\PH\to\gamma^{*}\gamma\to\mu\mu\gamma$, results in the same final state as the signal. This process exhibits a peak in the three-body invariant mass $m_{\mu\mu\gamma}$ at the Higgs boson mass, and is therefore referred to as a peaking, or resonant, background. It is taken into account when deriving the upper limit on the branching fraction for $\PH \to\JPsi\ \gamma$. The diagrams for $\PH\to\gamma^*\gamma$ process are shown in Fig.~\ref{fig:FeynmanDiagrams_Dalitz}. Samples of Higgs boson Dalitz decays, produced in ggF, VBF, V$\PH$ for $m_{\PH}=125$\GeV, are simulated at NLO using the $\MADGRAPH 5$\_a\MCATNLO 2.6.0 matrix element generator~\cite{Alwall:2014hca}, interfaced with \PYTHIA 8.212 for parton showering and hadronization. The dimuon invariant mass $m_{\mu\mu}$ in the ggF sample is restricted to be less than 50\GeV, while in VBF and V$\PH$ samples it is less than 60\GeV. The contribution of the tt$\PH$ is accounted for by scaling the VBF signal to the tt$\PH$ production cross section. The branching fraction for $\PH\to\gamma^{*}\gamma$ is obtained from MCFM 7.0.1 program~\cite{MCFM7}. The other source of peaking background comes from the decay of a Higgs boson into two muons, with a photon radiated from one of the muons. Fig.~\ref{fig:GenLevel_Hmumu} shows the distributions of some kinematic variables for the $\PH\to\PGm\PGm$ and the $\PH\to\JPsi\ \gamma$ decays. As one can see, the event signatures of the decay are different from those of the $\PH\to\JPsi\ \gamma$. The contribution of this background is found to be negligible after the event selection.		
 		
 \begin{table}[!ht]
 		%\footnotesize
@@ -155,7 +153,7 @@ The $\MADGRAPH 5$\_a\MCATNLO 2.6.0 generator at leading order with the NNPDF3.0 
   \end{center}
 \end{figure}
 The additional photons added by \PYTHIA may modify the photon $\et$ modeling in the sample. The effect is checked by using generator level information.
-		Figs.~\ref{fig:ZGPYTHIA} shows two distributions, one is the $\et$ of the photons which are prompt final states\footnotemark (in blue) and the other one is the $\et$ of the photons added by the $\PYTHIA8$ when it is interfaced with $a\MCATNLO$ (in red). The number of photons with $\et > 33 \GeV$ added by $\PYTHIA8$ is only 0.3\% of those from hard scattering. Therefore, the interface with $\PYTHIA$ has minimal effect on the overall photon $\et$ spectrum, and no additional uncertainty is assigned.
+		Figs.~\ref{fig:ZGPYTHIA} shows two distributions, one is the $\et$ of the photons which are prompt final states\footnotemark (in blue) and the other one is the $\et$ of the photons added by the $\PYTHIA8$ when it is interfaced with $a\MCATNLO$ (in red). The number of photons with $\et > 33 \GeV$ added by $\PYTHIA8$ is only 0.3\% of those from hard scattering. Therefore, the interface with $\PYTHIA$ has minimal effect on the overall photon $\et$ spectrum. No additional uncertainty is assigned.
 		\footnotetext{A particle is labeled as prompt if it is from the hard process in an interaction.}
 		\begin{figure}[!ht]
 		\begin{center}
@@ -178,7 +176,7 @@ These processes include
 		Since currently no proper simulated samples for those processes are available, these non-resonant backgrounds are modeled using the fits to $m_{\mu\mu\gamma}$ in data, which will be introduced in Sec.~\ref{sec:BkgModel}.
 		
 		\subsubsection*{Pile-up reweighting}
-		The simulated sample is reweighted in analysis level using minimum bias events with cross section of $69.2\text{mb}$. The corresponding systematic uncertainties are described in Sec.~\ref{sec:Systematic}, and are estimated to be less than 1.5\% on the expected yields of the signal for both the Higgs and Z boson decays.
+		The simulated sample is reweighted in analysis level using minimum bias events with cross section of $69.2\text{mb}$. The corresponding systematic uncertainties are described in Sec.~\ref{sec:Systematic}, and are estimated to be less than 1.5\% on the expected yields of the signal in both channels.
 		
 		\section{Trigger}  
 		The HLT\_Mu17\_Photon30\_CaloIdL\_L1ISO trigger is used in this analysis. 
@@ -406,13 +404,13 @@ These processes include
 		  \label{fig:FakeMuEst}
 		\end{figure}	
 		
-		The other information that can be extracted here is that, lots of events from QCD background can be removed by applying the isolation, based on the fact that the $\JPsi$ in the distributions are from QCD events rather than from actual signal $\PH (\cPZ)\to(\JPsi)\gamma$. Whether the isolation is applied or not has negligible impact on the expected signal yields (less than 1\%).
+		The other information that can be extracted here is that, lots of events from QCD background can be removed by applying the isolation, based on the fact that the $\JPsi$ in the distributions are from QCD events rather than from actual signal $\PH (\cPZ)\to\JPsi\gamma$. Whether the isolation is applied or not has negligible impact on the expected signal yields (less than 1\%).
 		
 		\subsubsection{Muon momentum calibration}
 		In this analysis, Rochester Muon Momentum Corrections~\cite{Bodek:2012id} derived for 2016 dataset are applied.
 		Biases in the measurement of muon momenta in hadron collider experiments can originate from several sources such as misalignment of the detectors, the deficiency in the software reconstruction, and uncertainties in magnetic field. Corrections are developed to remove such biases. The momentum scale corrections are extracted using the average of $1/\pt \ (<1/\pt>)$ spectra of muons from $\cPZ$ decay, while the resolution corrections and scale factors are derived by comparing the $m_{\mu\mu}$ distributions between data and MC. The corrections are then applied to correct the momentum scale in data events and resolution in simulated events. 
 		%The corrections were derived from combined datasets. No significant Run-dependence of correction was observed when the corrections were applied to different Runs. \\ 
-		We validate whether the Rochester correction would give consistent energy scale and resolution between data and MC for the muons from decay of $\JPsi$ candidates in $\PH\to(\JPsi)\gamma$ events. In this validation study, the events are required to satisfy the nominal selection requirements with relaxed dimuon and photon transverse momenta ($\pt^{\mu\mu}, \et^{\gamma}/m_{\mu\mu\gamma} > 0.16(20/125)$). To quantify the scale and resolution, a Breit-Wigner convolved with a Crystal Ball function (Eq.~\ref{eqn:f_MC}) is used to fit the distribution for the signal events. For the data events, Breit-Wigner convolved with a Crystal Ball function in addition of the Bernstein $1_{\text{st}}$ polynomial (Eq.~\ref{eqn:f_data}) is used as model. As can be seen in Fig.~\ref{fig:RochcorForJpsi}, the $m_{\mu\mu}$ distribution in MC is smeared, while the scale of the $m_{\mu\mu}$ distribution in data is shifted. 
+		We validate whether the Rochester correction would give consistent energy scale and resolution between data and MC for the muons from decay of $\JPsi$ candidates in $\PH\to\JPsi\gamma$ events. In this validation study, the events are required to satisfy the nominal selection requirements with relaxed dimuon and photon transverse momenta ($\pt^{\mu\mu}, \et^{\gamma}/m_{\mu\mu\gamma} > 0.16(20/125)$). To quantify the scale and resolution, a Breit-Wigner convolved with a Crystal Ball function (Eq.~\ref{eqn:f_MC}) is used to fit the distribution for the signal events. For the data events, Breit-Wigner convolved with a Crystal Ball function in addition of the Bernstein $1_{\text{st}}$ polynomial (Eq.~\ref{eqn:f_data}) is used as model. As can be seen in Fig.~\ref{fig:RochcorForJpsi}, the $m_{\mu\mu}$ distribution in MC is smeared, while the scale of the $m_{\mu\mu}$ distribution in data is shifted. 
 		
 		\begin{equation}
 		f_{\JPsi - \text{MC}} = \text{BW}(m,\Delta)\otimes \text{CB}(0,\sigma_{CB},\alpha,n)
@@ -631,7 +629,7 @@ The efficiency of the photon identification is measured from $\cPZ\to\re\re$ eve
 		\end{table}
 		
 	In the $\cPZ\to\JPsi\ \gamma$ search, selected events are classified into mutually exclusive categories in order to enhance the sensitivity of the search. The categorization is based on the $\eta$ of the photon and the photon $\RNINE$ variable (defined as the energy sum of 3$\times$3 ECAL crystals centered on the most energetic crystal in the supercluster divided by the energy of the supercluster). Unconverted photons have high values of $\RNINE$ and a threshold of 0.94 is used to classify reconstructed photons with high $\RNINE$ (thus with a better resolution) and low $\RNINE$ (worse resolution).  The background is larger in the converted photon category.  The three categories are: photon in the barrel region with a high $\RNINE$ value (referred to as EB high $\RNINE$); photon in the barrel region with low $\RNINE$ value (referred to as EB low $\RNINE$); photon in the endcap region (referred to as EE). The EE category is not divided into high/low $\RNINE$ because there are few events in this category. By this categorization, this improvement on the search limit is $\sim 2.0\%$.
-	In the $\PH\to\JPsi\ \gamma$ search events are not divided into categories. The possibility of splitting the EE category was investigated, but this did not result in a significant improvement.	
+	In the $\PH\to\JPsi\ \gamma$ search events are not divided into categories. The statistical sample is simply not large enough to overcome statistical fluctuations if it is further subdivided. As a result, we do not expect that the $\PH\to\JPsi\ \gamma$ sample with limited statistics can define the shape of our discriminating variable, $m_{\mu\mu\gamma}$, used in the hypothesis test that differs between the categories.	The possibility of splitting the EE category is investigated, but this indeed does not result in a significant improvement.	
 		
 		The exact definition of the three event categories in $\cPZ\to\JPsi\ \gamma$ search are shown in Table~\ref{tab:2}.
 		The table includes the fractions of expected events in each category for signal and of the observed events for data. The $\sigma_{\text{eff}}$ of the $m_{\mu\mu\gamma}$ distribution of each category is also included. 
@@ -865,7 +863,7 @@ Vertex-related variables examined in this study are:
 		\item Dimuon vertex $\chi^{2}$, one of the indicators of the goodness of the fit
 		\item Dimuon vertex probability, which is the chi-square probability given the dimuon vertex $\chi^{2}$ and the number of degree of freedom in the fit.
 		\item Validity of the dimuon vertex. The vertex returned may not be valid in some cases. The status of the vertex will be invalid when the maximum number of iterations is exceeded or the fitted position is out of the tracker bounds.
-		\item Proper decay time t$= \frac{m_{\JPsi}}{\pt^{\JPsi}}\cdot \text{L}_{xy}$, where the $m_{\JPsi}$ is the mass of the reconstructed $\JPsi$ candidate
+		\item Proper decay time t$= \frac{m_{\JPsi}}{\pt^{\JPsi}}\cdot \text{L}_{xy}$, where the $m_{\JPsi}$ is the mass of the reconstructed $\JPsi$ candidate. The proper time can be negative by the fact that the $L_{xy}$ is defined either to be positive or negative. The positive (negative) value indicates that the angle between the $L_{xy}$ vector and the vector of $\pt^{\JPsi}$ is smaller (larger) than $\pi /2$.
 		\end{itemize}
 		
 		\begin{figure}[!ht]
@@ -875,10 +873,8 @@ Vertex-related variables examined in this study are:
 		  \end{center}
 		\end{figure}
 		
-		The distributions of the vertex-related variables from data (in black points with error bars) and signal (filled histograms) for the Higgs and $\cPZ$ boson searches are shown in Figs.~\ref{fig:vtx_hjpsig}, \ref{fig:vtx_zjpsig_cat1}, \ref{fig:vtx_zjpsig_cat2}, and \ref{fig:vtx_zjpsig_cat3}. These distributions are normalized to the number of selected events in data to enable a comparison between the shapes of the distributions for the simulated signals and the data. 
-		The distributions suggest that the $\JPsi$ candidates reconstructed in data, like the signal events, are produced promptly at the $\Pp\Pp$ interaction point, rather than coming from displaced heavy hadron decays.
-		%The agreement between the two suggests that the $\JPsi$ events selected in data are not coming from heavy flavor decays but, like the signal events, are promptly produced.
-		 Based on the above-mentioned argument, no additional requirement associated with these vertex variables is imposed any, since the $d_{xy}$, $d_{z}$, and the SIP$_{\text{3D}}$ cuts already reject non-prompt $\JPsi$.
+		The distributions of the vertex-related variables from data (in black points with error bars) and signal (filled histograms) for the Higgs and $\cPZ$ boson searches are shown in Figs.~\ref{fig:vtx_hjpsig}, \ref{fig:vtx_zjpsig_cat1}, \ref{fig:vtx_zjpsig_cat2}, and \ref{fig:vtx_zjpsig_cat3}. These distributions are normalized to the number of selected events in data. The distributions suggest that the $\JPsi$ candidates reconstructed in data, like the signal events, are produced promptly at the $\Pp\Pp$ interaction point, rather than coming from displaced heavy hadron decays.
+		Based on the above-mentioned argument, no additional requirement associated with these vertex variables is imposed any, since the $d_{xy}$, $d_{z}$, and the SIP$_{\text{3D}}$ cuts already reject non-prompt $\JPsi$.
 		
 		\begin{figure}[p]
 		  \centering
@@ -1148,10 +1144,7 @@ Vertex-related variables examined in this study are:
 
 		\begin{figure}[p]
 		    \centering
-		    \includegraphics[width=0.5\textwidth]{Fig/Fit/bkg/BkgFit_HJpsiG_Inclusive_Bernstein2_Alter1_VisErrorLinTrue}\\
-		    \includegraphics[width=0.5\textwidth]{Fig/Fit/bkg/BkgFit_ZJpsiG_EBHR9_Bernstein3_Alter1_VisErrorLinTrue}~
-		    \includegraphics[width=0.5\textwidth]{Fig/Fit/bkg/BkgFit_ZJpsiG_EBLR9_Bernstein3_Alter1_VisErrorLinTrue}\\
-		    \includegraphics[width=0.5\textwidth]{Fig/Fit/bkg/BkgFit_ZJpsiG_EE_Bernstein3_Alter1_VisErrorLinTrue}\\
+		    \includegraphics[width=1.0\textwidth]{Fig/Fit/CMS-SMP-17-012_Figure_007}
 		    \caption{\label{fig:finalfit}
 		     Non-resonant background fits with the lowest order unbiased functions to the three-body invariant mass $m_{\mu\mu\gamma}$ distributions observed in data for the $\Z\to\JPsi\ \gamma$ channel in the EB high $\RNINE$ category (top left), the EB low $\RNINE$ category (top left), the EE category (bottom left), as well as the $\PH\to\JPsi\ \gamma$ channel (bottom right).}
 		\end{figure}
@@ -1174,7 +1167,7 @@ Vertex-related variables examined in this study are:
 		    \includegraphics[width=0.5\textwidth]{Fig/Fit/SBFit_fix/BkgSigFit_ZJpsiG_EBLR9_Bernstein3}\\
 		    \includegraphics[width=0.5\textwidth]{Fig/Fit/SBFit_fix/BkgSigFit_ZJpsiG_EE_Bernstein3}\\
 		    \caption[]{\label{fig:sbfitfix}
-		     B+S fits, where signal component is fixed to be the expected yield in each category, with lowest order unbiased functions on the three-body invariant mass $m_{\mu\mu\gamma}$ distributions of data for$\PH\to (\JPsi)\gamma$ (top), $\cPZ\to (\JPsi)\gamma$ Cat1 (middle left), $\cPZ\to (\JPsi)\gamma$ Cat2 (middle right), and $\cPZ\to (\JPsi)\gamma$ Cat3 (bottom).}
+		     B+S fits, where signal component is fixed to be the expected yield in each category, with lowest order unbiased functions on the three-body invariant mass $m_{\mu\mu\gamma}$ distributions of data for $\PH\to \JPsi\ \gamma$ (top), $\cPZ\to \JPsi\ \gamma$ Cat1 (middle left), $\cPZ\to \JPsi\gamma$ Cat2 (middle right), and $\cPZ\to \JPsi\ \gamma$ Cat3 (bottom).}
 		\end{figure}
 		
 		\begin{figure}[p]
@@ -1184,7 +1177,7 @@ Vertex-related variables examined in this study are:
 		    \includegraphics[width=0.5\textwidth]{Fig/Fit/SBFit_notfix/BkgSigFit_ZJpsiG_EBLR9_Bernstein3}\\
 		    \includegraphics[width=0.5\textwidth]{Fig/Fit/SBFit_notfix/BkgSigFit_ZJpsiG_EE_Bernstein3}\\
 		    \caption[]{\label{fig:sbfitnotfix}
-		     B+S fits, where signal component is allowed to float, with lowest order unbiased functions on the three-body invariant mass $m_{\mu\mu\gamma}$ distributions of data for$\PH\to (\JPsi)\gamma$ (top), $\cPZ\to (\JPsi)\gamma$ Cat1 (middle left), $\cPZ\to (\JPsi)\gamma$ Cat2 (middle right), and $\cPZ\to (\JPsi)\gamma$ Cat3 (bottom).}
+		     B+S fits, where signal component is allowed to float, with lowest order unbiased functions on the three-body invariant mass $m_{\mu\mu\gamma}$ distributions of data for $\PH\to \JPsi\ \gamma$ (top), $\cPZ\to \JPsi\ \gamma$ Cat1 (middle left), $\cPZ\to\JPsi\ \gamma$ Cat2 (middle right), and $\cPZ\to\JPsi\ \gamma$ Cat3 (bottom).}
 		\end{figure}
 		
 		\begin{figure}[!ht]
@@ -1276,7 +1269,7 @@ Vertex-related variables examined in this study are:
 		\subsection*{Uncertainties affecting the shape of the signal model}
 		Since the energy resolution of simulated events is better than that in real data, smearing corrections are applied on simulated events. The energy scale in real data is corrected to match the simulated event.
 		\begin{itemize}
-		\item \textbf{Muon momentum scale and resolution}. Rochester correction derived for full 2016 dataset is used in the analysis. There are several sources contributing to the uncertainties, including statistical uncertainty, the effect of correction without reweighting reference to data, varied profile mass windows, and varied fitting mass windows. For each source, the analysis is run many times, varying the members given in the package. Different corrections on the $\pt$ are applied to muons, and the differences on muon $\pt$ are then propagated to $m_{\mu\mu\gamma}$. Fits to the resulting $m_{\mu\mu\gamma}$ distributions are done using previously mentioned signal model to obtain the mean and width of the Gaussian component of the signal model $\sigma$, which are measures of the scale and resolution uncertainties. When the mean values are to be obtained, the parameters of the signal model are fixed except for the mean value. Similarly, when the $\sigma$ values are to be obtained, all other parameters than $\sigma$ are fixed. 
+		\item \textbf{Muon momentum scale and resolution}. Rochester correction derived for full 2016 dataset is used in the analysis. There are several sources contributing to the uncertainties, including statistical uncertainty, the effect of correction without reweighting reference to data, varied profile mass windows, and varied fitting mass windows. For each source, the analysis is run many times, varying the members given in the package. Different corrections on the $\pt$ are applied to muons, and the differences on muon $\pt$ are then propagated to $m_{\mu\mu\gamma}$. Fits to the resulting $m_{\mu\mu\gamma}$ distributions are done using previously mentioned signal model to obtain the mean and width ($\sigma$) of the Gaussian component of the signal model, which are measures of the scale and resolution uncertainties. When the mean values are to be obtained, the parameters of the signal model are fixed except for the mean value. Similarly, when the $\sigma$ values are to be obtained, all other parameters than $\sigma$ are fixed. 
 		The largest variation on the mean/$\sigma$ among the members in each source is quoted. The uncertainties from these four sources are added in quadrature and assigned as total systematic uncertainty for the scale and resolution.
 		\item Photon energy scale. The uncertainty in the photon energy scale is estimated by varying the energy correction. Three sources are considered: statistical uncertainties, systematic uncertainties (cut-based selection, $\RNINE$ categorization, etc.), and gain switch uncertainties. Each of the sources contains up and down corrections. The analysis is run with these six variations and varied $m_{\mu\mu\gamma}$ distributions are obtained. The signal model with all parameters fixed except for the mean is fitted to varied distributions. The largest variation on the mean value of the fit with respect to the nominal one is taken as systematic uncertainty on the photon energy scale.
 		\item Photon energy resolution. The smearing of the photon energy is done with two parameters, rho and phi, corresponding to constant term and $\et$ dependent term. Each of them contains up and down corrections. Similar to what has been done for photon energy scale, the analysis is run with these four variations and varied $m_{\mu\mu\gamma}$ distributions are obtained. Alternatively, the signal model with all parameters fixed except the $\sigma$ is fitted to varied distributions. The largest variation on the $\sigma$ value of the fit with respect to the nominal one is taken as systematic uncertainty on the photon energy resolution.
@@ -1386,6 +1379,8 @@ Vertex-related variables examined in this study are:
 	  \end{center}
 	\end{table}
 	
+	The statistical uncertainty dominates in the present analysis. The largest systematic uncertainties come from theory and these affect the predicted signal yields most. The next two largest are from trigger and muon identification and isolation where the efficiency measurements come from a limited sample. Smaller systematic uncertainties are likely in future analyses since more improved and robust methods are being developed and planned for the future. Nevertheless, as a summary, the overall impact from the uncertainties in the final observed and expected limits are small.
+	
 	\subsection*{$\psi$ (2S) feed-down}
 	The decay $\psi (2S)\to\JPsi(\to\mu\mu)$+X, where X can be anything, contributes as a background source. 
 	Currently there is no theoretical reference on the branching ratio of the $\Z\to\psi (2S)\gamma$, so here an assumption is made,
@@ -1402,7 +1397,7 @@ Vertex-related variables examined in this study are:
 	we then expect to have $1.54/5.7\sim 0.270$ events from the $\psi$ (2S) decay, where 1.54 is the expected yield of $\cPZ\to\JPsi\ \gamma$. This is negligible amount compared to the total background, 384. 
 	
 	The mass shapes of this background at the generator level are shown in Fig.~\ref{fig:psi2Sfeeddown}, where $m_{\mu\mu\gamma}$ distributions from the $\cPZ\to(\psi\ (2S)\to\JPsi +X)\ \gamma$ are in blue and from the $\cPZ\to\JPsi\ \gamma$ are in red. The distribution in solid line is without the kinematic cuts used in the selection, while the filled distribution in dashed line is after imposing the kinematic cuts. The distribution without kinematic cuts is normalized to 1, while the one with kinematic cuts is normalized to the fraction of the events passing kinematic cuts. 
-	As one can see, the $\cPZ\to(\psi\ (2S)\to\JPsi+X)\ \gamma$ actually contributes as peaking background, with the peak shifts around 10\GeV toward lower value. Since it is estimated to be 1/6 of signal and small compared to total background, it will be taken care by the background fit. Further more, from the red dashed distribution the range containing $\sim68\%$ of events is of 87.4 to 94.6\GeV, which corresponds to 17.3\% of events of $\cPZ\to\psi\ (2S)\ \gamma$ after kinematic selection. It is less than 2.9\% of the $\cPZ\to\JPsi\ \gamma$ yield for which are relevent at limit calculation. 
+	As one can see, the $\cPZ\to(\psi\ (2S)\to\JPsi+X)\ \gamma$ actually contributes as peaking background, with the peak shifts around 10\GeV toward lower value. Since it is estimated to be 1/6 of signal and small compared to total background, it will be taken care by the background fit. Further more, from the red dashed distribution the range containing $\sim68\%$ of events is of 87.4 to 94.6\GeV, which corresponds to 17.3\% of events of $\cPZ\to\psi\ (2S)\ \gamma$ after kinematic selection. It is less than 2.9\% of the $\cPZ\to\JPsi\ \gamma$ yield for which are relevant at limit calculation. 
 	
 	\begin{figure}[!ht]\begin{center}
 	  \includegraphics[width=0.7\textwidth]{Fig/GenLevel_ZJpsiG/Psi2S_followup}

@@ -482,7 +482,8 @@ at the
 % this environment should probably be called abstract,
 % but we want people to also be able to get at the more
 % basic abstract environment
-\def\abstractpage{\cleardoublepage
+\def\abstractpage{
+% \cleardoublepage
 \begin{center}{\large{\bf \@title} \\
 by \\
 \@author \\[\baselineskip]}
@@ -500,7 +501,9 @@ by \\
 %% page.
 %% Krishna Sethuraman (1990)
 \def\endabstractpage{\end{abstract}\noindent
- \unvcopy\@abstractsupervisor \newpage}
+ \unvcopy\@abstractsupervisor 
+ %\newpage
+ }
 
 %% This counter is used to save the page number for the second copy of
 %% the abstract.
